@@ -45,8 +45,8 @@ export default function SignUpForm({ setToken }) {
                         onChange={(e) => {
                             const value = e.target.value
                             setUsername(value);
-                            if (value.length !== 8) {
-                                setUsernameError('Username must be eight characters in length');
+                            if (value.length < 8) {
+                                setUsernameError('Username must be at least eight characters in length');
                             } else {
                                 setUsernameError('');
                             }
